@@ -1,10 +1,22 @@
-import "dotenv/config";
+import convict from "convict";
 
-const config = {
+const config = convict({
   server: {
-    port: Number(process.env.PORT) || 3000,
+    port: {
+      doc: "Port of the server",
+      format: "Number",
+      default: 3000,
+      env: "PORT",
+    },
   },
-  env: process.env.NODE_ENV || "development",
-};
+  env: {
+    doc: "The application environment.",
+    format: ["production", "beta", "development"],
+    default: "development",
+    env: "NODE_ENV",
+  },
+});
+
+config.validate();
 
 export { config };

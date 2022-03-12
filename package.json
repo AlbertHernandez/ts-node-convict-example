@@ -1,7 +1,7 @@
 {
   "name": "ts-node-convict-example",
   "version": "1.0.0",
-  "description": "Example of a Typescript Node Application that uses Dotenv for env vars",
+  "description": "Example of a Typescript Node Application that uses Convict for env vars",
   "main": "src/index.js",
   "scripts": {
     "dev": "ts-node-dev --ignore-watch node_modules src/users/backend/start.ts",
@@ -18,7 +18,7 @@
   },
   "keywords": [
     "typescript",
-    "request validation"
+    "convict"
   ],
   "author": "",
   "license": "",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@types/convict": "^6.1.1",
     "@types/koa": "^2.13.4",
     "@types/koa-router": "^7.4.4",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
@@ -53,7 +54,7 @@
     ]
   },
   "dependencies": {
-    "dotenv": "^10.0.0",
+    "convict": "^6.2.1",
     "koa": "^2.13.4",
     "koa-router": "^10.1.1"
   }

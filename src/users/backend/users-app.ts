@@ -9,7 +9,7 @@ export class UsersApp {
   httpServer?: http.Server;
 
   constructor() {
-    this.port = config.server.port;
+    this.port = config.get("server.port");
     this.koa = new Koa();
 
     this.koa.use(usersRouter.middleware());
@@ -17,7 +17,7 @@ export class UsersApp {
 
   async start(): Promise<void> {
     this.httpServer = await this.koa.listen(this.port);
-    const env = config.env;
+    const env = config.get("env");
     console.log(
       `Users Backend App is running at http://localhost:${this.port} in ${env} mode`
     );
