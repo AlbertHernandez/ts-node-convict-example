@@ -1,8 +1,8 @@
 <h1 align="center">🚀</h1>
-<h3 align="center">TS Node DotEnv Example</h3>
+<h3 align="center">TS Node Convict Example</h3>
 
 <p align="center">
- Example of a Typescript Node Application that uses Dotenv for env vars
+ Example of a Typescript Node Application that uses Convict for env vars
 </p>
 
 ## Table of Contents
